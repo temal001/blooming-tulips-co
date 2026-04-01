@@ -33,7 +33,7 @@ color:white;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-     padding-top: 40px;
+     padding-top: 25px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -68,7 +68,7 @@ color: palevioletred;
 }
 
 .logo {
-    width:80px;
+    width:100px;
     height:auto;
 }
 
@@ -85,14 +85,16 @@ color: palevioletred;
 }
    .hero-img img {
     width: 100%;
-    max-width: 900px; /* BIG and dramatic */
     height: auto;
     border-radius: 12px;
     border: 0.5px solid rgba(255, 255, 255, 0.7); /* hairline */
     box-shadow: 0 8px 30px rgba(0,0,0,0.25);
 }
 
-
+span {
+    color:lightpink;
+    font-style: italic;
+}
 
 .HomePage {
     display: flex;
@@ -117,12 +119,12 @@ color: palevioletred;
 }
 
 .herotext h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     line-height: 1.2;
     max-width: 400px;
 }
 .herotext button {
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 12px 30px;
     background-color: white; /* or your chosen color */
     color: #546F58;
@@ -135,6 +137,81 @@ color: palevioletred;
 .herotext button:hover {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.Inseason {
+    text-align: center;
+    padding: 80px 40px;
+    color: white;
+}
+
+.Inseason h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Tabs */
+.carousel-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.carousel-tabs button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s ease;
+}
+
+.carousel-tabs button.active {
+    opacity: 1;
+    border-bottom: 2px solid #E8A6B1;
+}
+
+/* Slides container */
+.carousel-images {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Each slide */
+.slide {
+    display: none;
+    gap: 25px;
+    justify-content: center;
+    width:100%;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    display: flex;
+    justify-content: center;
+    gap:25px;
+    opacity: 1;
+}
+
+/* Images */
+.slide img {
+    width: 100%;
+    max-width: 330px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 .footer-content { 
@@ -166,14 +243,14 @@ text-align: center;
     background: rgba(255,255,255,0.1);
     padding: 25px;
     border-radius: 14px;
-    width: 350px;
+    width:350px;
     border: 1px solid rgba(255,255,255,0.2);
     transition: 0.3s ease;
     text-align: center;
 }
 
 .step img {
-    width: 100%;
+    width: ;
     height: 400px;
     object-fit: cover;
     border-radius: 12px;
@@ -198,6 +275,107 @@ text-align: center;
     margin-top: 12px;
     padding: 0 10px; 
 }
+/* ORDER PAGE STARTS HERE */
+
+.choose-first {
+    text-align: center;
+    padding: 40px;
+    color: white;
+}
+
+.mini-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mini-gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.mini-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+.back-arrow {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #E8A6B1;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.back-arrow:hover {
+    text-decoration: underline;
+}
+
+
+.order-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px;
+    color: white;
+}
+
+.product-info {
+    width: 45%;
+}
+
+.product-info img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.product-details h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.price {
+    font-size: 1.4rem;
+    color: #E8A6B1;
+    margin-top: 10px;
+}
+
+.order-form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    padding:30px;
+    border-radius: 10px;
+    
+}
+
+.order-form input,
+.order-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.order-form button {
+    margin-top: 20px;
+    padding: 14px;
+    background: #E8A6B1;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
 
 /* FOOTER */
 .site-footer {
@@ -207,6 +385,7 @@ text-align: center;
     color: white;
     text-align: center;
 }
+
 
 .footer-inner {
     max-width: 900px;
@@ -250,4 +429,22 @@ text-align: center;
     margin-top: 20px;
 }
 
+@media (max-width:767px){
+    .steps {
+    display: flex;
+    flex-direction: column;
+    
+}
+    
+    /*Media For Phone for Gallery on Order Page*/
+@media (max-width: 700px) {
+    .mini-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+@media (max-width: 450px) {
+    .mini-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -25,66 +25,62 @@
 </nav> 
 </header> 
 <!--HERO AREA--> 
-<section class="HomePage"> 
-<div class="herotext"> 
-<h1>Delivering <span>Joy</span>, One <span>Bloom</span> at a Time</h1> 
-<button type="button" onclick="">Order Now</button> 
-</div> 
-<div class="hero-img"> 
-<img src="images/frontflowers.jpg" alt="Hero Image"> 
-</div> 
-</section> 
-    
-   <section class="Inseason">
-    <h2>In Season</h2>
+    <div class="choose-first">
+    <h2>Choose a Bouquet</h2>
 
-   <div class="carousel-tabs">
-    <button data-slide="1" class="active">Fan Favorites</button>
-    <button data-slide="2">Spring Picks</button>
-</div>
-
-<div class="carousel-images">
-
-    <div class="slide active" data-slide="1">
+    <div class="mini-gallery">
         <a href="Order.html?item=favorites1"><img src="images/favorites1.jpg"></a>
         <a href="Order.html?item=favorites3"><img src="images/favorites3.jpg"></a>
         <a href="Order.html?item=favorites4"><img src="images/favorites4.jpg"></a>
-    </div>
-
-    <div class="slide" data-slide="2">
         <a href="Order.html?item=spring1"><img src="images/spring1.jpg"></a>
         <a href="Order.html?item=spring2"><img src="images/spring2.jpg"></a>
         <a href="Order.html?item=spring3"><img src="images/spring3.jpg"></a>
     </div>
-
 </div>
+
+<section class="order-section">
+
+    <div class="product-info">
+        <a href="Order.html" class="back-arrow">← Back to bouquets</a>
+
+        <img id="product-image" src="" alt="Bouquet Image">
+        
+        <div class="product-details">
+            <h1 id="product-name"></h1>
+            <p id="product-description"></p>
+            <p id="product-price" class="price"></p>
+        </div>
+    </div>
+
+    <form class="order-form">
+        <h2>Start Your Order Here</h2>
+
+        <label>Name</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Delivery Address</label>
+        <textarea required></textarea>
+        
+        <label>Phone Number</label>
+        <input type="tel" required pattern="\d{3}[-]\d{3}[-]\d{4}" placeholder="123‑456‑7890">
+
+
+        <label>Delivery Date</label>
+        <input type="date" required>
+
+        <label>Message On Card (optional)</label>
+        <textarea></textarea>
+
+        <button type="submit">Place Order</button>
+    </form>
 
 </section>
 
+<script src="order.js"></script>
 
-
-    <!--HOW IT WORK SECTION HERE--> 
-    <section class="HowItWorks">
-        <h2>How It Works</h2>
-        
-        <div class="steps">
-        <div class="step">
-            <img src="images/boquet.jpg" alt="Choose Flowers"> 
-            <h3> 1. Choose Your Blooms</h3>
-            <p> Select from out curated seasonal bouquets</p></div>
-            
-            <div class="step">
-            <img src="images/closeupflower.jpg" alt="Make Boquets"> 
-            <h3> 2. We HandCraft Your Order</h3>
-            <p> Our florists create your bouquet with care and love</p></div>
-            
-            <div class="step">
-            <img src="images/boquet2.jpg" alt="Deliver Fresh"> 
-            <h3> 3. Delivered Same Day</h3>
-            <p> Your Fresh Flowers is our priority, they arrive right at your doorstep</p></div>
-        
-        </div>
-    </section>
     <!--FOOTER--> 
 <footer class="site-footer">
     <div class="footer-inner">
@@ -100,5 +96,5 @@
         <p class="footer-copy">© 2026 Blooming Tulips — Made with love and petals 🌷</p>
     </div>
 </footer>
-  <script src="carousel.js"></script>
+     <script src="Order.js"></script>
 </body> 
