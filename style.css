@@ -32,14 +32,9 @@ color:white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
-     padding-top: 25px;
-    position: sticky;
+    padding: 10px 40px;
     top: 0;
     z-index: 1000;
-   background-color: rgba(84, 111, 88, 0.85); /* your green, but translucent */
-backdrop-filter: blur(6px); /* optional: makes it look modern */
-
 
 } 
  
@@ -54,6 +49,7 @@ border-bottom-left-radius: 1rem;
 font-weight: 500;  
 
 } 
+
 img { 
 max-width: 100%; 
 } 
@@ -85,10 +81,11 @@ color: palevioletred;
 }
    .hero-img img {
     width: 100%;
-    height: auto;
-    border-radius: 12px;
+    height: 550px;
+       object-fit: cover;
+    border-radius: 16px;
     border: 0.5px solid rgba(255, 255, 255, 0.7); /* hairline */
-    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
 }
 
 span {
@@ -100,32 +97,33 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 80px; 
+    padding: 45px 80px; 
     gap: 80px; 
+    margin-top: -10px;
 }
 
  
 .herotext {
-    flex: 0.7; /* smaller text area */
+    flex: 0.6; /* smaller text area */
     max-width: 420px;
     padding: 20px;
 }
 
 .hero-img {
-    flex: 1.3; /* image gets more space */
-    padding: 20px;
+    flex: 1.4; /* image gets more space */
+    padding: 15px;
     display: flex;
     justify-content: center;
 }
 
 .herotext h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     line-height: 1.2;
-    max-width: 400px;
+    max-width: 480px;
 }
 .herotext button {
     margin-top: 30px;
-    padding: 12px 30px;
+    padding: 16px 30px;
     background-color: white; /* or your chosen color */
     color: #546F58;
     font-size: 1.1rem;
@@ -142,6 +140,9 @@ span {
 .Inseason {
     text-align: center;
     padding: 80px 40px;
+    color: darkgrey;
+    background-color: #b98b82;
+    border-radius: 15px;
     color: white;
 }
 
@@ -155,7 +156,8 @@ span {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 45px;
+    color: darkgrey;
 }
 
 .carousel-tabs button {
@@ -170,7 +172,7 @@ span {
 
 .carousel-tabs button.active {
     opacity: 1;
-    border-bottom: 2px solid #E8A6B1;
+    border-bottom: 2px solid white;
 }
 
 /* Slides container */
@@ -183,6 +185,21 @@ span {
     margin: 0 auto;
 }
 
+.carousel-images button{ 
+ margin-top: 50px;
+    padding: 12px 30px;
+    background-color: white; /* or your chosen color */
+    color: #546F58;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.carousel-images button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
 /* Each slide */
 .slide {
     display: none;
@@ -195,7 +212,7 @@ span {
 .slide.active {
     display: flex;
     justify-content: center;
-    gap:25px;
+    gap:60px;
     opacity: 1;
 }
 
@@ -203,10 +220,13 @@ span {
 .slide img {
     width: 100%;
     max-width: 330px;
-    height: 420px;
+    height: 550px;
     object-fit: cover;
     border-radius: 12px;
     transition: 0.3s ease;
+    transition: transform .22s ease, box-shadow .22s ease;
+    box-shadow: 0 0 0 12px rgba(255,255,255,0.05),
+              0 18px 36px rgba(0,0,0,0.22);
 }
 
 .slide img:hover {
@@ -218,90 +238,277 @@ span {
 flex-direction: column; 
 text-align: center; 
 } 
-
+/* HOW IT WORKS SECTION HERE */
+/* How It Works section layout */
 .HowItWorks {
-    text-align: center;
-    padding: 100px 5px;
-    color: white;
+  padding: 48px 15px;
+  text-align: center;
+  color: #222;
 }
 
 .HowItWorks h2 {
-    font-size: 3rem;
-    margin-bottom: 40px;
+  font-size: 3rem;          /* bigger, more presence */
+  font-weight: 700;         /* stronger weight */
+  color: #F4F7F2;           /* soft off‑white that looks great on dark green */
+  letter-spacing: 1px;      /* subtle spacing for elegance */
+  margin-bottom: 36px;
+    padding-top: 30px;
 }
 
-.steps {
+
+
+
+/* Bigger circular images with centered captions */
+.HowItWorks .steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.HowItWorks .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 12px;
+}
+
+.HowItWorks .step img {
+  width: 300px;       /* change this number to make images larger or smaller */
+  height: 300px;      /* keep width and height equal for a perfect circle */
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  transition: transform .22s ease, box-shadow .22s ease;
+    box-shadow: 0 0 0 12px rgba(255,255,255,0.05),
+              0 18px 36px rgba(0,0,0,0.22);
+    
+}
+
+.HowItWorks .step img:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 22px 44px rgba(0,0,0,0.14);
+}
+
+.HowItWorks .step h3 {
+    letter-spacing: .8px;
+    padding-top: 15px;
+  margin: 0;
+  font-size: 1.6rem;
+color: #F4F7F2;  
+}
+
+.HowItWorks .step p {
+  margin: 0;
+  color: #F4F7F2;  
+  max-width: 360px;
+  line-height: 1.4;
+}
+
+/* Responsive sizes */
+@media (max-width: 900px) {
+  .HowItWorks .steps { grid-template-columns: repeat(2, 1fr); }
+  .HowItWorks .step img { width: 240px; height: 240px; }
+}
+
+@media (max-width: 520px) {
+  .HowItWorks .steps { grid-template-columns: 1fr; }
+  .HowItWorks .step img { width: 180px; height: 180px; }
+}
+
+.hero-banner {
+    height: 60vh;
+    background: url("images/bgflower1.jpg") center/cover no-repeat;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap:90px;
-    flex-wrap:nowrap;
-    max-width: 1700px;
-    margin: 0 auto;
-}
-
-.step {
-    background: rgba(255,255,255,0.1);
-    padding: 25px;
-    border-radius: 14px;
-    width:350px;
-    border: 1px solid rgba(255,255,255,0.2);
-    transition: 0.3s ease;
     text-align: center;
+    color: white;
+    position: relative;
 }
 
-.step img {
-    width: ;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    border: 0.5px solid rgba(255,255,255,0.4);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+/* Soft overlay so text is readable */
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
 }
 
-.step h3 {
-    margin-bottom: 14px;
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-family: "Playfair Display", serif;
+}
+
+.hero-content h2 {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #E8A6B1;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+/* END OF INDEX PAGE*/
+.hero-btn:hover {
+    background: #d98a96;
+}
+.breadcrumb {
+    margin: 35px 70px;
+    max-width: 1100px;
+    font-size: 0.95rem;
     color: white;
 }
 
-
-.step p {
-    line-height: 1.7;
-    font-size: 1rem;
-    opacity: 0.85;
-    margin-top: 12px;
-    padding: 0 10px; 
+.breadcrumb a {
+    color: #E8A6B1;
+    text-decoration: none;
 }
-/* ORDER PAGE STARTS HERE */
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .current {
+    color: white;
+    pointer-events: none;
+}
+
 
 .choose-first {
     text-align: center;
-    padding: 40px;
+    padding: 35px;
     color: white;
+    
+    
+   
 }
 
+.choose-first h2 {
+    font-size: 3rem;
+    padding: 20px 15px;
+}
+
+.hero2-banner {
+    position: relative;
+    width: 100%;
+    height: 30vh; /* thinner header */
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.hero2-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.hero2-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.hero2-text h2 {
+    font-size: 3rem;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.5px;
+    opacity: 0.95;
+}
+
+
+/* GALLERY GRID */
 .mini-gallery {
+    padding-top: 35px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 per row */
-    gap: 20px;
-    max-width: 900px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.mini-gallery img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 12px;
-    cursor: pointer;
+/* EACH ITEM CARD */
+.mini-gallery .item {
+    position: relative;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
     transition: 0.3s ease;
 }
 
-.mini-gallery img:hover {
-    transform: scale(1.05);
+.mini-gallery .item:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* IMAGE — BIGGER + CLEANER */
+.mini-gallery img {
+    width: 100%;
+    height: 320px; /* bigger image */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* NAME */
+.mini-gallery h3 {
+    margin-top: 20px;
+    margin: 20px;
+    font-size: 1.50rem;
+    color: white;
+    font-weight: 500;
+     font-family: "Zalando Sans SemiExpanded", sans-serif;
+}
+
+/* PRICE BOX */
+.mini-gallery .price-box {
+    background: white;
+    color: #48494B;
+    display: inline-block;
+    padding: 6px 55px;
+    border-radius: 3px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-weight:400;
+    font-size: 1.25rem;
+   font-family: "Zalando Sans SemiExpanded", sans-serif;
+    
+}
+
+/* OPTIONAL TAG OVERLAY */
+.mini-gallery .tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background:#FFC5BD ;
+    color: #48494B;
+    padding: 6px 12px;
+    font-size: 1.10rem;
+    font-weight: 400;
+    z-index: 5;
+    font-family: "Zalando Sans SemiExpanded", sans-serif;
 }
 
 
@@ -321,13 +528,14 @@ text-align: center;
 .order-section {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 50px;
-    padding: 60px;
+    padding: 40px;
     color: white;
 }
-
 .product-info {
     width: 45%;
+
 }
 
 .product-info img {
@@ -338,33 +546,86 @@ text-align: center;
 }
 
 .product-details h1 {
+    text-align: center;
     margin-top: 20px;
     font-size: 2rem;
 }
-
+.product-details p{
+    text-align: center;
+    padding-top: 15px;
+}
 .price {
     font-size: 1.4rem;
     color: #E8A6B1;
-    margin-top: 10px;
+    margin-top: 1px;
+}
+.order-info {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+.order-info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-family: "Playfair Display", serif;
+}
+
+.accordion-btn {
+    width: 100%;
+    text-align: left;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+.accordion-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 0 18px;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.9;
 }
 
 .order-form {
     width: 40%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    background: rgba(255, 255, 255, 0.15);
-    padding:30px;
-    border-radius: 10px;
-    
+    gap: 22px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
 }
 
 .order-form input,
 .order-form textarea {
+    height:55px;
     width: 100%;
     padding: 12px;
     border-radius: 8px;
     border: none;
+    background: rgba(255, 255, 255, 0.85);
 }
 
 .order-form button {
@@ -375,11 +636,180 @@ text-align: center;
     border-radius: 8px;
     font-size: 1.2rem;
     cursor: pointer;
+    transition: 0.3s ease;
 }
+
+
+
+
+
+.about-split {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    max-width: 100%;
+    margin: auto; 
+    padding: 50px;
+    background-color: #b98b82;
+    
+}
+
+.about-split.reverse {
+    flex-direction: row-reverse;
+    background-color: #87645e;
+ 
+}
+
+.about-image img  {
+    width: 430px;      
+  height: 430px;      
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  transition: transform .22s ease, box-shadow .22s ease;
+ box-shadow: 0 0 0 12px rgba(255,255,255,0.05),
+              0 18px 36px rgba(0,0,0,0.22);
+    
+}
+
+
+
+
+
+.about-text {
+    max-width: 500px;
+    color: white;
+
+}
+
+.about-text h2 {
+    letter-spacing: .6px;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+}
+.about-text h3 {
+    font-family: "Zalando Sans SemiExpanded", sans-serif;
+}
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.service-hours {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.service-hours li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    font-size: .95rem;
+    letter-spacing: 0.3px;
+    font-family: "Zalando Sans SemiExpanded", sans-serif;
+}
+
+
+
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+    .about-split,
+    .about-split.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+/* CONATCT SECTION */
+.contact-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 40px auto 20px;
+    color: white;
+    opacity: 0.9;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.contact-image img {
+    width: 500px;
+    height: 800px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.contact-form h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.contact-form textarea {
+    height: 140px;
+    resize: none;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 14px;
+    background: #E8A6B1;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+
 
 /* FOOTER */
 .site-footer {
-    margin-top: 100px;
+    margin-top: 10px;
     padding: 50px 20px;
     background: rgba(0, 0, 0, 0.2);
     color: white;
@@ -435,6 +865,107 @@ text-align: center;
     flex-direction: column;
     
 }
+    
+    @media (max-width: 520px) {
+
+  body {
+    font-size: 14px;
+    padding: 0;
+  }
+
+  header {
+    padding: 10px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav a {
+    margin-left: 15px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 520px) {
+
+  .bloomlogo-img {
+      align-items: center;
+    gap: 6px;
+    transform: scale(0.85);
+    transform-origin: left center;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .logo-text {
+    font-size: 1.50rem;
+  }
+
+  header {
+      margin-top: 65px;
+    padding: 8px px;
+  }
+
+  /* HERO SECTION */
+  .HomePage {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .hero-img {
+    order: 1;
+  }
+
+  .herotext {
+    order: 2;
+    text-align: center;
+  }
+
+  .herotext h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-img img {
+    height: 300px;
+  }
+
+  /* CAROUSEL */
+  .carousel-tabs {
+    gap: 12px;
+  }
+
+  .slide {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .slide img {
+    max-width: 90%;
+    height: 350px;
+  }
+
+  /* HOW IT WORKS */
+  .HowItWorks h2 {
+    font-size: 2.2rem;
+  }
+
+  .HowItWorks .step img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* HERO BANNER */
+  .hero-banner {
+    height: 40vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+}
+
     
     /*Media For Phone for Gallery on Order Page*/
 @media (max-width: 700px) {

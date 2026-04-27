@@ -1,13 +1,15 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
+<link rel="icon" type="image/png" sizes="32x32" href="images/whitebbglmtups.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/whitebbglmtups.png">
 <style> 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap'); 
 </style> 
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <link rel="stylesheet" href="style.css"> 
-<title>Document</title> 
+<title>Home</title> 
 </head> 
 <body> 
 
@@ -15,20 +17,24 @@
 <header> 
  
 <div class="bloomlogo-img"> 
+
 <img src="images/whitebbglmtups.png" alt="Logo Image" class="logo"> 
     <class class="logo-text">Blooming Tulips Co.</class>
 </div> 
 <nav class="navbar">
 <a href="Order.html">Order</a>
-<a href="ExploreUs.html">About</a> 
-<a href="contactus.html"> Contact</a> 
+<a href="About.html">About</a> 
+<a href="Contact.html"> Contact</a> 
 </nav> 
+    
 </header> 
 <!--HERO AREA--> 
 <section class="HomePage"> 
 <div class="herotext"> 
 <h1>Delivering <span>Joy</span>, One <span>Bloom</span> at a Time</h1> 
-<button type="button" onclick="">Order Now</button> 
+<a href="Order.html">
+    <button type="button">Get Started</button>
+</a>
 </div> 
 <div class="hero-img"> 
 <img src="images/frontflowers.jpg" alt="Hero Image"> 
@@ -36,8 +42,7 @@
 </section> 
     
    <section class="Inseason">
-    <h2>In Season</h2>
-
+    <h2>IN SEASON</h2>
    <div class="carousel-tabs">
     <button data-slide="1" class="active">Fan Favorites</button>
     <button data-slide="2">Spring Picks</button>
@@ -56,7 +61,9 @@
         <a href="Order.html?item=spring2"><img src="images/spring2.jpg"></a>
         <a href="Order.html?item=spring3"><img src="images/spring3.jpg"></a>
     </div>
-
+<a href="Order.html">
+    <button type="button">View All</button>
+</a>
 </div>
 
 </section>
@@ -69,22 +76,30 @@
         
         <div class="steps">
         <div class="step">
-            <img src="images/boquet.jpg" alt="Choose Flowers"> 
+            <img src="images/moreboquet2.jpg" alt="Choose Flowers"> 
             <h3> 1. Choose Your Blooms</h3>
             <p> Select from out curated seasonal bouquets</p></div>
             
             <div class="step">
-            <img src="images/closeupflower.jpg" alt="Make Boquets"> 
+            <img src="images/makingboquet2.jpg" alt="Make Boquets"> 
             <h3> 2. We HandCraft Your Order</h3>
             <p> Our florists create your bouquet with care and love</p></div>
             
             <div class="step">
-            <img src="images/boquet2.jpg" alt="Deliver Fresh"> 
+            <img src="images/delivery.jpg" alt="Deliver Fresh"> 
             <h3> 3. Delivered Same Day</h3>
             <p> Your Fresh Flowers is our priority, they arrive right at your doorstep</p></div>
         
         </div>
     </section>
+    
+       <section class="hero-banner">
+    <div class="hero-content">
+        <h1>Fresh Flowers, Delivered With Love</h1>
+        <p>Choose from our handcrafted bouquets for every occasion</p>
+        <a href="#bouquet-gallery" class="hero-btn">Browse Bouquets</a>
+    </div>
+</section>
     <!--FOOTER--> 
 <footer class="site-footer">
     <div class="footer-inner">
@@ -97,6 +112,7 @@
             <a href="Order.html">Order</a>
         </div>
 
+       
         <p class="footer-copy">© 2026 Blooming Tulips — Made with love and petals 🌷</p>
     </div>
 </footer>
