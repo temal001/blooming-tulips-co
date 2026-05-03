@@ -1,0 +1,205 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<link rel="icon" type="image/png" sizes="32x32" href="images/whitebbglmtups.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/whitebbglmtups.png">
+    
+<style> 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap'); 
+</style> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="style.css"> 
+<title>Order Now</title> 
+</head> 
+<body> 
+
+<!--NAV HERE--> 
+<header> 
+ 
+<div class="bloomlogo-img"> 
+    <a href="index.html">
+        <img src="images/whitebbglmtups.png" alt="Logo Image" class="logo">
+    </a>
+    <a class="logo-text">Blooming Tulips Co.</a>
+</div>
+<nav class="navbar">
+<a href="Order.html">Order</a>
+<a href="About.html">About</a> 
+<a href="Contact.html"> Contact</a> 
+</nav> 
+</header> 
+<!--HERO AREA--> 
+ <section class="hero2-banner">
+    <img src="images/makingboquet2.jpg" alt="Floral arrangement" class="hero2-img">
+
+    <div class="hero2-text">
+        <h2>Pick A Boquet</h2>
+    </div>
+ </section>
+    <nav class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="Order.html" class="current">Order</a>
+</nav>
+    
+
+
+<!--Gallery Section--> 
+    <div class="choose-first">
+
+    <div class="mini-gallery">
+        
+         <div class="item">
+        <div class="tag">Deluxe</div>
+        <a href="Order.html?item=favorites1"><img src="images/favorites1.jpg"></a>
+        <h3> Elegant Warm Bundle </h3>
+
+        <div class="price-box">$69.99</div>
+    </div>
+        
+        <div class="item">
+        <a href="Order.html?item=favorites3"><img src="images/favorites3.jpg"></a>
+        <h3>White Rose Delight</h3>
+
+        <div class="price-box">$37.99</div>
+    </div>
+        
+        <div class="item">
+        <div class="tag">Deluxe</div>
+        <a href="Order.html?item=favorites4"><img src="images/favorites4.jpg"></a>
+        <h3>Peach & Pink Roses </h3>
+
+        <div class="price-box">$65.99</div>
+    </div>
+        
+        <div class="item">
+        <a href="Order.html?item=spring1"><img src="images/spring1.jpg"></a>
+        <h3>Classic Pink Rose Wrap</h3>
+
+        <div class="price-box">$45.99</div>
+    </div>
+        <div class="item">
+         <div class="tag">Spring Collection</div>
+        <a href="Order.html?item=spring2"><img src="images/spring2.jpg"></a>
+        <h3>Pink Perfection Wrap</h3>
+
+        <div class="price-box">$42.99</div>
+    </div>
+        <div class="item">
+            <div class="tag">Spring Collection</div>
+        <a href="Order.html?item=spring3"><img src="images/spring3.jpg"></a>
+        <h3>Spring Tulip Bunch</h3>
+
+        <div class="price-box">$30.99</div>
+    </div>
+        <div class="item">
+        <a href="Order.html?item=spring4"><img src="images/spring4.jpg"></a>
+        <h3>Cream Roses & Greens</h3>
+
+        <div class="price-box">$35.00</div>
+    </div>
+        <div class="item">
+        <div class="tag">Spring Collection</div>
+        <a href="Order.html?item=spring4"><img src="images/spring5.jpg"></a>
+        <h3>White Tulip Wrap</h3>
+
+        <div class="price-box">$25.99</div>
+    </div>
+        <div class="item">
+        <a href="Order.html?item=spring6"><img src="images/spring6.jpg"></a>
+<h3>Rustic Flower Wrap</h3>
+
+        <div class="price-box">$35.99</div>
+    </div>
+    </div>
+</div>
+
+<section class="order-section">
+
+    <div class="product-info">
+        <a href="Order.html" class="back-arrow">← Back to bouquets</a>
+
+        <img id="product-image" src="" alt="Bouquet Image">
+        
+        <div class="product-details">
+            <h1 id="product-name"></h1>
+            <p id="product-description"></p>
+            <p id="product-price" class="price"></p>
+        </div>
+        <div class="order-info">
+    <h2>Ready to Order? Here's What to Know</h2>
+
+    <div class="accordion">
+        <button class="accordion-btn">How Delivery Works</button>
+        <div class="accordion-content">
+            <p>We deliver throughout Louisville and nearby areas. Standard delivery windows are 9 AM – 6 PM. You’ll receive a confirmation email after placing your order.</p>
+        </div>
+
+        <button class="accordion-btn">Need It by a Specific Time?</button>
+        <div class="accordion-content">
+            <p>If you need a specific delivery time, mention it in the notes. We’ll try our best, but exact times aren’t guaranteed unless arranged beforehand.</p>
+        </div>
+
+        <button class="accordion-btn">Special Events & Large Orders</button>
+        <div class="accordion-content">
+            <p>For weddings, parties, or large events, please contact us 1–2 weeks in advance so we can prepare custom florals.</p>
+        </div>
+
+        <button class="accordion-btn">What Not to Do</button>
+        <div class="accordion-content">
+            <p>Please avoid placing same‑day orders without checking availability first. We want your flowers to arrive fresh and on time.</p>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <form class="order-form">
+        <h2>Start Your Order Here</h2>
+
+        <label>Name</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Delivery Address</label>
+        <textarea required></textarea>
+        
+        <label>Phone Number</label>
+        <input type="tel" required pattern="\d{3}[-]\d{3}[-]\d{4}" placeholder="123‑456‑7890">
+
+
+        <label>Delivery Date</label>
+        <input type="date" required>
+
+        <label>Message On Card (optional)</label>
+        <textarea></textarea>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+</section>
+
+
+<script src="order.js"></script>
+
+    <!--FOOTER--> 
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-brand">Blooming Tulips</p>
+        <p class="footer-tagline">Delivering joy, one bloom at a time.</p>
+
+        <div class="footer-links">
+            <a href="AboutUs.html">About</a>
+            <a href="contactus.html">Contact</a>
+            <a href="Order.html">Order</a>
+        </div>
+
+        <p class="footer-copy">© 2026 Blooming Tulips — Made with love and petals 🌷</p>
+    </div>
+</footer>
+     <script src="Order.js"></script>
+    
+</body> 
