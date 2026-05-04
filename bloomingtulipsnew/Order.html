@@ -117,71 +117,79 @@
 
 <section class="order-section">
 
-    <div class="product-info">
-        <a href="Order.html" class="back-arrow">← Back to bouquets</a>
+    <!-- LEFT COLUMN: PRODUCT INFO + ACCORDION -->
+    <div class="left-column">
 
-        <img id="product-image" src="" alt="Bouquet Image">
-        
-        <div class="product-details">
-            <h1 id="product-name"></h1>
-            <p id="product-description"></p>
-            <p id="product-price" class="price"></p>
+        <!-- PRODUCT INFO -->
+        <div class="product-info">
+            <a href="Order.html" class="back-arrow">← Back to bouquets</a>
+
+            <img id="product-image" src="images/boquet2.jpg" alt="Bouquet Image">
+
+            <div class="product-details">
+                <h1 id="product-name"></h1>
+                <p id="product-description"></p>
+                <p id="product-price" class="price"></p>
+            </div>
         </div>
+
+        <!-- ACCORDION SECTION -->
         <div class="order-info">
-    <h2>Ready to Order? Here's What to Know</h2>
+            <h2>Ready to Order? Here's What to Know</h2>
 
-    <div class="accordion">
-        <button class="accordion-btn">How Delivery Works</button>
-        <div class="accordion-content">
-            <p>We deliver throughout Louisville and nearby areas. Standard delivery windows are 9 AM – 6 PM. You’ll receive a confirmation email after placing your order.</p>
+            <div class="accordion">
+
+                <button class="accordion-btn">How Delivery Works</button>
+                <div class="accordion-content">
+                    <p>We deliver throughout Louisville and nearby areas. Standard delivery windows are 9 AM – 6 PM. You’ll receive a confirmation email after placing your order.</p>
+                </div>
+
+                <button class="accordion-btn">Need It by a Specific Time?</button>
+                <div class="accordion-content">
+                    <p>If you need a specific delivery time, mention it in the notes. We’ll try our best, but exact times aren’t guaranteed unless arranged beforehand.</p>
+                </div>
+
+                <button class="accordion-btn">Special Events & Large Orders</button>
+                <div class="accordion-content">
+                    <p>For weddings, parties, or large events, please contact us 1–2 weeks in advance so we can prepare custom florals.</p>
+                </div>
+
+                <button class="accordion-btn">What Not to Do</button>
+                <div class="accordion-content">
+                    <p>Please avoid placing same‑day orders without checking availability first. We want your flowers to arrive fresh and on time.</p>
+                </div>
+
+            </div>
         </div>
 
-        <button class="accordion-btn">Need It by a Specific Time?</button>
-        <div class="accordion-content">
-            <p>If you need a specific delivery time, mention it in the notes. We’ll try our best, but exact times aren’t guaranteed unless arranged beforehand.</p>
-        </div>
-
-        <button class="accordion-btn">Special Events & Large Orders</button>
-        <div class="accordion-content">
-            <p>For weddings, parties, or large events, please contact us 1–2 weeks in advance so we can prepare custom florals.</p>
-        </div>
-
-        <button class="accordion-btn">What Not to Do</button>
-        <div class="accordion-content">
-            <p>Please avoid placing same‑day orders without checking availability first. We want your flowers to arrive fresh and on time.</p>
-        </div>
     </div>
-</div>
 
-    </div>
-
-    <form class="order-form">
+    <!-- RIGHT COLUMN: ORDER FORM -->
+    <form class="order-form" action="feedback.html" method="GET">
         <h2>Start Your Order Here</h2>
 
         <label>Name</label>
-        <input type="text" required>
+        <input type="text" name="name" required>
 
         <label>Email</label>
-        <input type="email" required>
+        <input type="email" name="email" required>
 
         <label>Delivery Address</label>
-        <textarea required></textarea>
-        
-        <label>Phone Number</label>
-        <input type="tel" required pattern="\d{3}[-]\d{3}[-]\d{4}" placeholder="123‑456‑7890">
+        <textarea name="address" required></textarea>
 
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required placeholder="123‑456‑7890">
 
         <label>Delivery Date</label>
-        <input type="date" required>
+        <input type="date" name="date" required>
 
         <label>Message On Card (optional)</label>
-        <textarea></textarea>
+        <textarea name="cardMessage"></textarea>
 
         <button type="submit">Place Order</button>
     </form>
 
 </section>
-
 
 <script src="order.js"></script>
 
