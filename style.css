@@ -26,6 +26,27 @@ background-color:#546F58;
 color:white; 
 } 
 
+.designer-bar {
+    width: 100%;
+    background: #ff6b6b; /* cute soft red */
+    padding: 12px 0;
+    text-align: center;
+}
+
+.designer-bar a {
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    transition: 0.3s ease;
+}
+
+.designer-bar a:hover {
+    opacity: 0.85;
+}
+
+
  header {
     display: flex;
     justify-content: space-between;
