@@ -912,8 +912,14 @@ color: #F4F7F2;
     margin-top: 20px;
 }
 
+@media (min-width: 1500px) {
+    .product-info img {
+        height: 600px !important;
+    }
+}
 
-    
+
+
     
 /* iPad Landscape — 1024px */
 @media (max-width: 1024px) {
@@ -1034,8 +1040,7 @@ color: #F4F7F2;
 }
 
 .product-info img {
-    width: 100%;
-    height: 380px;
+    width: 10%;
     object-fit: cover;
 }
 
@@ -1229,7 +1234,7 @@ color: #F4F7F2;
 
     .product-info img {
         width: 100%;
-        height: 360px;
+        height: 380px;
         object-fit: cover;
     }
 
